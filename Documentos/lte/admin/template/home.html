@@ -1,0 +1,11 @@
+{% extends 'adminlte/base.html' %}
+  <meta charset="UTF-8">
+  {% block title %}Home{% endblock %}
+  {% block content %}
+  {% load staticfiles %}
+  {% load i18n %}
+  <a href="{% url 'auth_login' %}"><button class="ui-button">Iniciar Sesión</button></a>
+
+  <a href="{% url 'registration_register' %}"><button class="ui-button">Registrar</button></a>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+logrotate state -- version 2
+"/home/jaret/.cache/upstart/hud.log" 2017-5-4-19:0:16
+"/home/jaret/.cache/upstart/indicator-sound.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/update-notifier-release.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/at-spi2-registryd.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/bamfdaemon.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/unity-panel-service.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/upstart-event-bridge.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/update-notifier-crash-_var_crash__usr_bin_update-manager.1000.crash.log" 2017-4-15-11:2:28
+"/home/jaret/.cache/upstart/unity7.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/indicator-keyboard.log" 2017-5-4-19:0:16
+"/home/jaret/.cache/upstart/unity-panel-service-lockscreen.log" 2017-5-2-23:2:36
+"/home/jaret/.cache/upstart/ssh-agent.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/update-notifier-cds.log" 2017-5-2-19:12:33
+"/home/jaret/.cache/upstart/gnome-keyring-ssh.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/unity-settings-daemon.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/dbus.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/indicator-printers.log" 2017-5-4-19:0:16
+"/home/jaret/.cache/upstart/window-stack-bridge.log" 2017-5-10-19:8:48
+"/home/jaret/.cache/upstart/gpg-agent.log" 2017-5-10-19:8:48

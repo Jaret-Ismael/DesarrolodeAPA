@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<table class="table table-bordered">
+
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Nombre</td>
+			<td>Apellidos</td>
+			<td>Edad</td>
+			<td>Telefono</td>
+			<td>Email</td>
+			<td>Domicilio</td>
+		</tr>
+	</thead>
+	<tbody>
+	{% if persona %}
+	{% for persona in persona %}
+	<tr>
+		<td>{{persona.id}}</td>
+		<td>{{persona.nombre}}</td>
+		<td>{{persona.apellidos}}</td>
+		<td>{{persona.edad}}</td>
+		<td>{{persona.telefono}}</td>
+		<td>{{persona.email}}</td>
+		<td>{{persona.domicilio}}</td>
+	</tr>
+		{% endfor %}
+		{% endif %}
+		
+	</tbody>
+	
+	
+	
+</table>
+{% endblock %}

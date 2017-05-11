@@ -1,0 +1,4 @@
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /org/ayatana/bamf/window/37749037"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /org/ayatana/bamf/window/67108872"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /org/ayatana/bamf/window/73400330"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "No existe tal interfaz «com.canonical.dbusmenu» en ruta de objeto /org/ayatana/bamf/window/69212764"

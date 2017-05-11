@@ -1,0 +1,55 @@
+/estructurando componentes
+1.-Crear un directorio llamado "components" dentro del directorio "src" y dentro de el, un archivo llamado "Artist.vue"
+
+2.-Modificar el archivo App.vue en la sección PUG:
+
+ul
+      artist(v-for="artist in artists" v-bind:artist="artist") 
+
+3.-Pegar el siguiente código en Artist.vue:
+
+<template lang="pug">
+  li
+    h2: a(:href="artist.url" target="_blank") {{artist.name}}
+    img(:src="artist.image[2]['#text']")
+</template>
+<script>
+export default {
+  name: 'artist',
+  props:['artist']
+}
+</script>
+
+<style lang="stylus">
+li
+  display block
+  margin 10px 0
+</style>
+
+4.-modificar la sección del script en App.vue:
+
+<script>
+import Artist from './components/Artist.vue'
+import getArtists from './api'
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      artists:[]
+    }
+  },
+  components:{
+    Artist
+  },
+  mounted: function (){
+    const self = this
+    getArtists()
+      .then(function (artists) {
+        self.artists = artists
+      })
+
+  }
+}
+</script>
+

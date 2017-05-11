@@ -1,0 +1,951 @@
+{
+	"folder_history":
+	[
+		"/home/jaret/music",
+		"/home/jaret/practica1/tienda",
+		"/home/jaret/pandas",
+		"/home/jaret/basquet",
+		"/home/jaret/pd110",
+		"/home/jaret/examen",
+		"/home/jaret/proyecto",
+		"/home/jaret/practica1"
+	],
+	"last_version": 3126,
+	"last_window_id": 28,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 0.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"p",
+						"placeholder\tAttr"
+					],
+					[
+						"fo",
+						"form-group"
+					],
+					[
+						"in",
+						"input\tTag"
+					],
+					[
+						"nav",
+						"navbar"
+					],
+					[
+						"h",
+						"h3\tTag"
+					],
+					[
+						"text-a",
+						"text-align"
+					],
+					[
+						"co",
+						"col-sm-6"
+					],
+					[
+						"di",
+						"div\tTag"
+					],
+					[
+						"url",
+						"urlpatterns"
+					],
+					[
+						"d",
+						"django"
+					],
+					[
+						"s",
+						"settings"
+					],
+					[
+						"STATIC",
+						"STATIC_URL"
+					],
+					[
+						"B",
+						"BASE_DIR"
+					],
+					[
+						"F",
+						"False"
+					],
+					[
+						"email",
+						"email_mensaje"
+					],
+					[
+						"E",
+						"EMAIL_HOST"
+					],
+					[
+						"form",
+						"form_data"
+					],
+					[
+						"cl",
+						"cleaned_data"
+					],
+					[
+						"R",
+						"regModelForm"
+					],
+					[
+						"ab",
+						"abc2"
+					],
+					[
+						"f",
+						"from"
+					],
+					[
+						"ac",
+						"action\tAttr"
+					],
+					[
+						"ur",
+						"url"
+					],
+					[
+						"re",
+						"request"
+					],
+					[
+						"Regi",
+						"Registrado"
+					],
+					[
+						"mascotas",
+						"mascotas"
+					],
+					[
+						"bac",
+						"background-color"
+					],
+					[
+						"ba",
+						"background-color"
+					],
+					[
+						"col",
+						"color"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 152.0,
+				"last_filter": "insta",
+				"selected_items":
+				[
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"",
+						"Install Package Control"
+					],
+					[
+						"pac",
+						"Install Package Control"
+					]
+				],
+				"width": 449.0
+			},
+			"console":
+			{
+				"height": 51.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+					"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/jaret/music/.babelrc",
+				"/home/jaret/music/.gitignore",
+				"/home/jaret/music/README.md",
+				"/home/jaret/music/index.html",
+				"/home/jaret/music/package.json",
+				"/home/jaret/music/webpack.config.js",
+				"/home/jaret/basquet/src/api/config.js",
+				"/home/jaret/basquet/src/App.vue",
+				"/home/jaret/pd110/src/boletin/models.py",
+				"/home/jaret/pd110/src/pd110/settings.py",
+				"/home/jaret/basquet/package.json",
+				"/home/jaret/pd110/src/templates/registration/registration_form.html",
+				"/home/jaret/pd110/src/boletin/views.py",
+				"/home/jaret/pd110/src/pd110/views.py",
+				"/home/jaret/pd110/src/templates/navbar.html",
+				"/home/jaret/pd110/src/static_pro/static/css/navbar-static-top.css",
+				"/home/jaret/pd110/src/static_pro/static/css/ie10-viewport-bug-workaround.css",
+				"/home/jaret/pd110/src/static_pro/static/css/custom.css",
+				"/home/jaret/pd110/src/static_pro/static/css/bootstrap.min.css",
+				"/home/jaret/pd110/src/templates/inicio.html",
+				"/home/jaret/pd110/src/templates/registration/login.html",
+				"/home/jaret/pd110/src/templates/forms.html",
+				"/home/jaret/pd110/src/templates/registration/logout.html",
+				"/home/jaret/pd110/src/pd110/urls.py",
+				"/home/jaret/pd110/src/templates/registration/password_reset_confirm.html",
+				"/home/jaret/pd110/src/templates/registration/activation_email.txt",
+				"/home/jaret/pd110/src/templates/registration/activation_complete.html",
+				"/home/jaret/pd110/src/templates/registration/activation_email_subject.txt",
+				"/home/jaret/pd110/src/templates/base.html",
+				"/home/jaret/pd110/src/templates/head_css.html",
+				"/home/jaret/pd110/src/templates/javascript.html",
+				"/home/jaret/pd110/src/boletin/forms.py",
+				"/home/jaret/pd110/src/boletin/admin.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/urls.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/views.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/forms.py",
+				"/home/jaret/examen/veterinaria/veterinaria/urls.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/admin.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/forms.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/admin.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/urls.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/views.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/models.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/models.py",
+				"/home/jaret/examen/veterinaria/veterinaria/settings.py",
+				"/home/jaret/examen/veterinaria/apps/__init__.py",
+				"/home/jaret/practica1/tienda/tienda/templates/index.html",
+				"/home/jaret/practica1/tienda/tienda/static/css/base.css",
+				"/home/jaret/practica1/tienda/tienda/tienda/settings.py",
+				"/home/jaret/practica1/tienda/tienda/products/urls.py",
+				"/home/jaret/practica1/tienda/tienda/tienda/urls.py",
+				"/home/jaret/practica1/tienda/tienda/products/views.py",
+				"/home/jaret/practica1/tienda/tienda/templates/new_product.html",
+				"/home/jaret/practica1/tienda/tienda/products/forms.py",
+				"/home/jaret/practica1/tienda/tienda/templates/product_detail.html",
+				"/home/jaret/practica1/tienda/tienda/products/models.py",
+				"/home/jaret/practica1/tienda/tienda/products/admin.py",
+				"/home/jaret/practica1/tienda/tiend/products/views.py",
+				"/home/jaret/practica1/tienda/tiend/tiend/urls.py",
+				"/home/jaret/practica1/tienda/tiend/static/css/base.css",
+				"/home/jaret/practica1/tienda/tiend/templates/index.html",
+				"/home/jaret/practica1/tienda/tiend/tiend/settings.py",
+				"/home/jaret/practica1/tienda/tiend/products/models.py",
+				"/home/jaret/practica1/tienda/tiend/products/urls.py",
+				"/home/jaret/practica1/tienda/tiend/products/admin.py",
+				"/home/jaret/practica1/tienda/tienda/media/harvol1.jpg",
+				"/home/jaret/practica1/tienda/tienda/static/base.css",
+				"/home/jaret/practica1/casa/casas/views.py",
+				"/home/jaret/practica1/casa/casas/migrations/urls.py",
+				"/home/jaret/practica1/casa/casa/urls.py",
+				"/home/jaret/practica1/casa/casas/admin.py",
+				"/home/jaret/practica1/casa/casa/settings.py",
+				"/home/jaret/practica1/casa/casas/models.py",
+				"/home/jaret/16marzo/5/untitled.html",
+				"/home/jaret/16marzo/4/estilos4.css",
+				"/home/jaret/16marzo/4/Layout.html",
+				"/home/jaret/16marzo/3/estilos3.css",
+				"/home/jaret/16marzo/3/Colum.html",
+				"/home/jaret/16marzo/2/estilos2.css",
+				"/home/jaret/16marzo/Tiny Tweaks.html",
+				"/home/jaret/16marzo/estilos.css",
+				"/home/jaret/16marzo/estilos2.css",
+				"/home/jaret/16marzo/mustly.html",
+				"/home/jaret/16marzo/estilos4.css",
+				"/home/jaret/16marzo/Layout.html",
+				"/home/jaret/16marzo/estilos3.css",
+				"/home/jaret/16marzo/Colum.html",
+				"/home/jaret/16marzo/Tiny Tweaks",
+				"/home/jaret/16marzo/responsive.html",
+				"/home/jaret/16marzo/Estilos.css",
+				"/home/jaret/practica1/inmobiliaria/casa/views.py",
+				"/home/jaret/practica1/inmobiliaria/casa/models.py",
+				"/home/jaret/practica1/inmobiliaria/inmobiliaria/settings.py",
+				"/home/jaret/practica1/inmobiliaria/casa/admin.py",
+				"/home/jaret/practica1/casa/casasas/models.py"
+			],
+			"find":
+			{
+				"height": 0.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 182.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 0.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"l",
+						"link\tTag"
+					],
+					[
+						"p",
+						"placeholder\tAttr"
+					],
+					[
+						"fo",
+						"form-group"
+					],
+					[
+						"in",
+						"input\tTag"
+					],
+					[
+						"nav",
+						"navbar"
+					],
+					[
+						"h",
+						"h3\tTag"
+					],
+					[
+						"text-a",
+						"text-align"
+					],
+					[
+						"co",
+						"col-sm-6"
+					],
+					[
+						"di",
+						"div\tTag"
+					],
+					[
+						"url",
+						"urlpatterns"
+					],
+					[
+						"d",
+						"django"
+					],
+					[
+						"s",
+						"settings"
+					],
+					[
+						"STATIC",
+						"STATIC_URL"
+					],
+					[
+						"B",
+						"BASE_DIR"
+					],
+					[
+						"F",
+						"False"
+					],
+					[
+						"email",
+						"email_mensaje"
+					],
+					[
+						"E",
+						"EMAIL_HOST"
+					],
+					[
+						"form",
+						"form_data"
+					],
+					[
+						"cl",
+						"cleaned_data"
+					],
+					[
+						"R",
+						"regModelForm"
+					],
+					[
+						"ab",
+						"abc2"
+					],
+					[
+						"f",
+						"from"
+					],
+					[
+						"ac",
+						"action\tAttr"
+					],
+					[
+						"ur",
+						"url"
+					],
+					[
+						"re",
+						"request"
+					],
+					[
+						"Regi",
+						"Registrado"
+					],
+					[
+						"mascotas",
+						"mascotas"
+					],
+					[
+						"bac",
+						"background-color"
+					],
+					[
+						"ba",
+						"background-color"
+					],
+					[
+						"col",
+						"color"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/jaret/music/src/components/Spinner.vue",
+					"settings":
+					{
+						"buffer_size": 2754,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/jaret/music/src/components/stilo.html",
+					"settings":
+					{
+						"buffer_size": 318,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/jaret/music/src/components/estilos.css",
+					"settings":
+					{
+						"buffer_size": 505,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/jaret/music/src/App.vue",
+					"settings":
+					{
+						"buffer_size": 1478,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 152.0,
+				"last_filter": "insta",
+				"selected_items":
+				[
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"",
+						"Install Package Control"
+					],
+					[
+						"pac",
+						"Install Package Control"
+					]
+				],
+				"width": 449.0
+			},
+			"console":
+			{
+				"height": 51.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+					"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/home/jaret/music",
+				"/home/jaret/music/src",
+				"/home/jaret/music/src/components"
+			],
+			"file_history":
+			[
+				"/home/jaret/music/src/loader.html",
+				"/home/jaret/music/src/App.vue",
+				"/home/jaret/music/src/components/Artist.vue",
+				"/home/jaret/music/src/components/Spinner.vue",
+				"/home/jaret/music/.babelrc",
+				"/home/jaret/music/.gitignore",
+				"/home/jaret/music/README.md",
+				"/home/jaret/music/index.html",
+				"/home/jaret/music/package.json",
+				"/home/jaret/music/webpack.config.js",
+				"/home/jaret/basquet/src/api/config.js",
+				"/home/jaret/basquet/src/App.vue",
+				"/home/jaret/pd110/src/boletin/models.py",
+				"/home/jaret/pd110/src/pd110/settings.py",
+				"/home/jaret/basquet/package.json",
+				"/home/jaret/pd110/src/templates/registration/registration_form.html",
+				"/home/jaret/pd110/src/boletin/views.py",
+				"/home/jaret/pd110/src/pd110/views.py",
+				"/home/jaret/pd110/src/templates/navbar.html",
+				"/home/jaret/pd110/src/static_pro/static/css/navbar-static-top.css",
+				"/home/jaret/pd110/src/static_pro/static/css/ie10-viewport-bug-workaround.css",
+				"/home/jaret/pd110/src/static_pro/static/css/custom.css",
+				"/home/jaret/pd110/src/static_pro/static/css/bootstrap.min.css",
+				"/home/jaret/pd110/src/templates/inicio.html",
+				"/home/jaret/pd110/src/templates/registration/login.html",
+				"/home/jaret/pd110/src/templates/forms.html",
+				"/home/jaret/pd110/src/templates/registration/logout.html",
+				"/home/jaret/pd110/src/pd110/urls.py",
+				"/home/jaret/pd110/src/templates/registration/password_reset_confirm.html",
+				"/home/jaret/pd110/src/templates/registration/activation_email.txt",
+				"/home/jaret/pd110/src/templates/registration/activation_complete.html",
+				"/home/jaret/pd110/src/templates/registration/activation_email_subject.txt",
+				"/home/jaret/pd110/src/templates/base.html",
+				"/home/jaret/pd110/src/templates/head_css.html",
+				"/home/jaret/pd110/src/templates/javascript.html",
+				"/home/jaret/pd110/src/boletin/forms.py",
+				"/home/jaret/pd110/src/boletin/admin.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/urls.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/views.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/forms.py",
+				"/home/jaret/examen/veterinaria/veterinaria/urls.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/admin.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/forms.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/admin.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/urls.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/views.py",
+				"/home/jaret/examen/veterinaria/apps/adopcion/models.py",
+				"/home/jaret/examen/veterinaria/apps/mascotas/models.py",
+				"/home/jaret/examen/veterinaria/veterinaria/settings.py",
+				"/home/jaret/examen/veterinaria/apps/__init__.py",
+				"/home/jaret/practica1/tienda/tienda/templates/index.html",
+				"/home/jaret/practica1/tienda/tienda/static/css/base.css",
+				"/home/jaret/practica1/tienda/tienda/tienda/settings.py",
+				"/home/jaret/practica1/tienda/tienda/products/urls.py",
+				"/home/jaret/practica1/tienda/tienda/tienda/urls.py",
+				"/home/jaret/practica1/tienda/tienda/products/views.py",
+				"/home/jaret/practica1/tienda/tienda/templates/new_product.html",
+				"/home/jaret/practica1/tienda/tienda/products/forms.py",
+				"/home/jaret/practica1/tienda/tienda/templates/product_detail.html",
+				"/home/jaret/practica1/tienda/tienda/products/models.py",
+				"/home/jaret/practica1/tienda/tienda/products/admin.py",
+				"/home/jaret/practica1/tienda/tiend/products/views.py",
+				"/home/jaret/practica1/tienda/tiend/tiend/urls.py",
+				"/home/jaret/practica1/tienda/tiend/static/css/base.css",
+				"/home/jaret/practica1/tienda/tiend/templates/index.html",
+				"/home/jaret/practica1/tienda/tiend/tiend/settings.py",
+				"/home/jaret/practica1/tienda/tiend/products/models.py",
+				"/home/jaret/practica1/tienda/tiend/products/urls.py",
+				"/home/jaret/practica1/tienda/tiend/products/admin.py",
+				"/home/jaret/practica1/tienda/tienda/media/harvol1.jpg",
+				"/home/jaret/practica1/tienda/tienda/static/base.css",
+				"/home/jaret/practica1/casa/casas/views.py",
+				"/home/jaret/practica1/casa/casas/migrations/urls.py",
+				"/home/jaret/practica1/casa/casa/urls.py",
+				"/home/jaret/practica1/casa/casas/admin.py",
+				"/home/jaret/practica1/casa/casa/settings.py",
+				"/home/jaret/practica1/casa/casas/models.py",
+				"/home/jaret/16marzo/5/untitled.html",
+				"/home/jaret/16marzo/4/estilos4.css",
+				"/home/jaret/16marzo/4/Layout.html",
+				"/home/jaret/16marzo/3/estilos3.css",
+				"/home/jaret/16marzo/3/Colum.html",
+				"/home/jaret/16marzo/2/estilos2.css",
+				"/home/jaret/16marzo/Tiny Tweaks.html",
+				"/home/jaret/16marzo/estilos.css",
+				"/home/jaret/16marzo/estilos2.css",
+				"/home/jaret/16marzo/mustly.html",
+				"/home/jaret/16marzo/estilos4.css",
+				"/home/jaret/16marzo/Layout.html",
+				"/home/jaret/16marzo/estilos3.css",
+				"/home/jaret/16marzo/Colum.html",
+				"/home/jaret/16marzo/Tiny Tweaks",
+				"/home/jaret/16marzo/responsive.html",
+				"/home/jaret/16marzo/Estilos.css",
+				"/home/jaret/practica1/inmobiliaria/casa/views.py",
+				"/home/jaret/practica1/inmobiliaria/casa/models.py",
+				"/home/jaret/practica1/inmobiliaria/inmobiliaria/settings.py",
+				"/home/jaret/practica1/inmobiliaria/casa/admin.py",
+				"/home/jaret/practica1/casa/casasas/models.py"
+			],
+			"find":
+			{
+				"height": 0.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/home/jaret/music"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 2,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/jaret/music/src/components/Spinner.vue",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2754,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										10,
+										10
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/jaret/music/src/components/stilo.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 318,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										94,
+										94
+									]
+								],
+								"settings":
+								{
+									"auto_name": "",
+									"syntax": "Packages/HTML/HTML.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/jaret/music/src/components/estilos.css",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 505,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/CSS/CSS.sublime-syntax",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/jaret/music/src/App.vue",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 1478,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										10,
+										10
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,1,0,0,0,713,140,1353,648,1366,768",
+			"project": "",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 182.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 28,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

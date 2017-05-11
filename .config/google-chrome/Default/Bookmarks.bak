@@ -1,0 +1,130 @@
+{
+   "checksum": "0f188fab94795653b246ebe8bb6223b2",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "children": [ {
+                  "date_added": "13134111043000000",
+                  "id": "9",
+                  "name": "Ubuntu",
+                  "type": "url",
+                  "url": "http://www.ubuntu.com/"
+               }, {
+                  "date_added": "13134111043000000",
+                  "id": "10",
+                  "name": "Ubuntu Wiki (community-edited website)",
+                  "type": "url",
+                  "url": "http://wiki.ubuntu.com/"
+               }, {
+                  "date_added": "13134111043000000",
+                  "id": "11",
+                  "meta_info": {
+                     "last_visited_desktop": "13137036764263186"
+                  },
+                  "name": "Make a Support Request to the Ubuntu Community",
+                  "type": "url",
+                  "url": "https://answers.launchpad.net/ubuntu/+addquestion"
+               }, {
+                  "date_added": "13134111043000000",
+                  "id": "12",
+                  "name": "Debian (Ubuntu is based on Debian)",
+                  "type": "url",
+                  "url": "http://www.debian.org/"
+               } ],
+               "date_added": "13136745841429055",
+               "date_modified": "0",
+               "id": "8",
+               "name": "Ubuntu and Free Software links",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13134111043000000",
+                  "id": "14",
+                  "name": "Ayuda y tutoriales",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/es-MX/firefox/help/"
+               }, {
+                  "date_added": "13134111043000000",
+                  "id": "15",
+                  "name": "Personalizar Firefox",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/es-MX/firefox/customize/"
+               }, {
+                  "date_added": "13134111043000000",
+                  "id": "16",
+                  "name": "¡Participa!",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/es-MX/contribute/"
+               }, {
+                  "date_added": "13134111043000000",
+                  "id": "17",
+                  "name": "Acerca de nosotros",
+                  "type": "url",
+                  "url": "https://www.mozilla.org/es-MX/about/"
+               } ],
+               "date_added": "13136745841430588",
+               "date_modified": "0",
+               "id": "13",
+               "name": "Mozilla Firefox",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13134719548000000",
+                  "id": "19",
+                  "name": "GitHub - adamcharnock/django-adminlte2: Reusable AdminLTE templates and admin theme",
+                  "type": "url",
+                  "url": "https://github.com/adamcharnock/django-adminlte2"
+               }, {
+                  "date_added": "13134786268000000",
+                  "id": "20",
+                  "name": "Quick start guide — django-registration-redux 1.4 documentation",
+                  "type": "url",
+                  "url": "http://django-registration-redux.readthedocs.io/en/latest/quickstart.html"
+               } ],
+               "date_added": "13136745841431626",
+               "date_modified": "0",
+               "id": "18",
+               "name": "Otros marcadores",
+               "type": "folder"
+            }, {
+               "date_added": "13136748844343779",
+               "id": "23",
+               "meta_info": {
+                  "last_visited_desktop": "13137276353590686"
+               },
+               "name": "PROBAR DJANGO | Crear una Aplicación Web | Udemy",
+               "type": "url",
+               "url": "https://www.udemy.com/probar-django-construir-una-aplicacion-web-en-python/learn/v4/overview"
+            } ],
+            "date_added": "13136745841426242",
+            "date_modified": "13136748844343779",
+            "id": "7",
+            "name": "Importado desde Firefox",
+            "type": "folder"
+         } ],
+         "date_added": "13136745725467386",
+         "date_modified": "0",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13136745725467399",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Otros favoritos",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13136745725467401",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Favoritos del celular",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

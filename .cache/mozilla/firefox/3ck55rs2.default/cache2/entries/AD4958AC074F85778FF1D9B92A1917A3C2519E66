@@ -1,0 +1,283 @@
+Drupal.locale = { 'pluralFormula': function ($n) { return Number(($n!=1)); }, 'strings': {"":{"Search":"Buscar","Show":"Mostrar","Not published":"No publicado","The changes to these blocks will not be saved until the \u003Cem\u003ESave blocks\u003C\/em\u003E button is clicked.":"Los cambios sobre estos bloques no se guardar\u00e1n hasta que no pulse el bot\u00f3n \u003Cem\u003EGuardar bloques\u003C\/em\u003E.","Configure":"Configurar","Select all rows in this table":"Seleccionar todas las filas de esta tabla","Deselect all rows in this table":"Quitar la selecci\u00f3n a todas las filas de esta tabla","Join summary":"Unir resumen","Split summary at cursor":"Definir resumen hasta el cursor","Drag to re-order":"Arrastre para reordenar","Changes made in this table will not be saved until the form is submitted.":"Los cambios realizados en esta tabla no se guardar\u00e1n hasta que se env\u00ede el formulario","Unspecified error":"Error no especificado","Please wait...":"Espere, por favor...","Browse":"Explorar","File Browser":"Explorador de documentos","Editor name":"Nombre del editor","Send to editor":"Enviar al editor","Tag editor - @tag":"Editor de etiquetas - @tag","The selected file %filename cannot be uploaded. Only files with the following extensions are allowed: %extensions.":"El archivo seleccionado %filename no puede ser subido. Solo se permiten archivos con las siguientes extensiones: %extensions.","Hide":"Ocultar","jQuery UI Tabs: Mismatching fragment identifier.":"jQuery UI Tabs: Identificador de fragmento no coincidente.","jQuery UI Tabs: Not enough arguments to add tab.":"jQuery UI Tabs: No hay argumentos para a\u00f1adir solapa.","Internal server error. Please see server or PHP logs for error information.":"Error interno del servidor. Por favor, consulte los registros de informaci\u00f3n de error del servidor o PHP.","New revision":"Revisi\u00f3n nueva","Pause":"Pausa","By @name on @date":"Por @name en @date","By @name":"Por @name","Alias: @alias":"Alias: @alias","No alias":"Sin alias","This permission is inherited from the authenticated user role.":"Este permiso se hereda del rol de usuario registrado.","No revision":"Sin revisi\u00f3n","@number comments per page":"@number comentarios por p\u00e1gina","Not restricted":"Sin restricci\u00f3n","(active tab)":"(solapa activa)","An AJAX HTTP error occurred.":"Hubo un error HTTP AJAX.","HTTP Result Code: !status":"C\u00f3digo de Resultado HTTP: !status","An AJAX HTTP request terminated abnormally.":"Una solicitud HTTP de AJAX termin\u00f3 de manera anormal.","Debugging information follows.":"A continuaci\u00f3n se detalla la informaci\u00f3n de depuraci\u00f3n.","Path: !uri":"Ruta: !uri","StatusText: !statusText":"StatusText: !statusText","ResponseText: !responseText":"ResponseText: !responseText","ReadyState: !readyState":"ReadyState: !readyState","Not customizable":"No personalizable","Restricted to certain pages":"Restringido a algunas p\u00e1ginas","The block cannot be placed in this region.":"El bloque no se puede colocar en esta regi\u00f3n.","Hide summary":"Ocultar resumen","Edit summary":"Editar resumen","Re-order rows by numerical weight instead of dragging.":"Reordenar las filas por peso num\u00e9rico en lugar de arrastrar.","Show row weights":"Mostrar pesos de la fila","Hide row weights":"Ocultar pesos de la fila","Autocomplete popup":"Ventana emergente con autocompletado","Searching for matches...":"Buscando coincidencias","Inclusion: @value":"Inclusi\u00f3n: @value","Priority: @value":"Prioridad: @value","Available tokens":"Tokens disponibles","Turn all subscriptions on.":"Activar todas las suscripciones","Turn all subscriptions off.":"Desactivar todas las suscripciones","Insert this token into your form":"Inserta este comod\u00edn en su formulario","hours":"horas","seconds":"segundos","minutes":"minutos","Disabled.":"Desactivado","Loading token browser...":"Cargando navegador de comodines...","Also allow !name role to !permission?":"\u00bfTambi\u00e9n permitir al rol !name el permiso !permission?","First click a text field to insert your tokens into.":"Primero haga clic en un campo de texto en el que quiera insertar sus patrones de reemplazo.","The response failed verification so will not be processed.":"La respuesta de verificaci\u00f3n fall\u00f3 por lo que no ser\u00e1 procesado.","The callback URL is not local and not trusted: !url":"La URL de llamada no es local y no es confiable: !url","CustomMessage: !customMessage":"CustomMessage: !customMessage","No results":"No hay resultados","clear":"limpiar"}} };;
+(function ($) {
+  Drupal.behaviors.rate = {
+    attach: function(context) {
+      $('.rate-widget:not(.rate-processed)', context).addClass('rate-processed').each(function () {
+        var widget = $(this);
+        // as we use drupal_html_id() to generate unique ids
+        // we have to truncate the '--<id>'
+        var ids = widget.attr('id').split('--');
+        ids = ids[0].match(/^rate\-([a-z]+)\-([0-9]+)\-([0-9]+)\-([0-9])$/);
+        var data = {
+          content_type: ids[1],
+          content_id: ids[2],
+          widget_id: ids[3],
+          widget_mode: ids[4]
+        };
+
+        $('a.rate-button', widget).click(function() {
+          var token = this.getAttribute('href').match(/rate\=([a-zA-Z0-9\-_]{32,64})/)[1];
+          return Drupal.rateVote(widget, data, token);
+        });
+      });
+    }
+  };
+
+  Drupal.rateVote = function(widget, data, token) {
+    // Invoke JavaScript hook.
+    widget.trigger('eventBeforeRate', [data]);
+
+    $(".rate-info", widget).text(Drupal.t('Saving vote...'));
+
+    // Random number to prevent caching, see http://drupal.org/node/1042216#comment-4046618
+    var random = Math.floor(Math.random() * 99999);
+
+    var q = (Drupal.settings.rate.basePath.match(/\?/) ? '&' : '?') + 'widget_id=' + data.widget_id + '&content_type=' + data.content_type + '&content_id=' + data.content_id + '&widget_mode=' + data.widget_mode + '&token=' + token + '&destination=' + encodeURIComponent(Drupal.settings.rate.destination) + '&r=' + random;
+    if (data.value) {
+      q = q + '&value=' + data.value;
+    }
+
+    // fetch all widgets with this id as class
+    widget = $('.' + widget.attr('id'));
+
+    $.get(Drupal.settings.rate.basePath + q, function(response) {
+      if (response.match(/^https?\:\/\/[^\/]+\/(.*)$/)) {
+        // We got a redirect.
+        document.location = response;
+      }
+      else {
+        // get parent object
+        var p = widget.parent();
+
+        // Invoke JavaScript hook.
+        widget.trigger('eventAfterRate', [data]);
+
+        widget.before(response);
+
+        // remove widget
+        widget.remove();
+        widget = undefined;
+
+        Drupal.attachBehaviors(p);
+      }
+    });
+
+    return false;
+  }
+})(jQuery);
+;
+(function ($) {
+
+Drupal.googleanalytics = {};
+
+$(document).ready(function() {
+
+  // Attach mousedown, keyup, touchstart events to document only and catch
+  // clicks on all elements.
+  $(document.body).bind("mousedown keyup touchstart", function(event) {
+
+    // Catch the closest surrounding link of a clicked element.
+    $(event.target).closest("a,area").each(function() {
+
+      // Is the clicked URL internal?
+      if (Drupal.googleanalytics.isInternal(this.href)) {
+        // Skip 'click' tracking, if custom tracking events are bound.
+        if ($(this).is('.colorbox') && (Drupal.settings.googleanalytics.trackColorbox)) {
+          // Do nothing here. The custom event will handle all tracking.
+          //console.info("Click on .colorbox item has been detected.");
+        }
+        // Is download tracking activated and the file extension configured for download tracking?
+        else if (Drupal.settings.googleanalytics.trackDownload && Drupal.googleanalytics.isDownload(this.href)) {
+          // Download link clicked.
+          ga("send", {
+            "hitType": "event",
+            "eventCategory": "Downloads",
+            "eventAction": Drupal.googleanalytics.getDownloadExtension(this.href).toUpperCase(),
+            "eventLabel": Drupal.googleanalytics.getPageUrl(this.href),
+            "transport": "beacon"
+          });
+        }
+        else if (Drupal.googleanalytics.isInternalSpecial(this.href)) {
+          // Keep the internal URL for Google Analytics website overlay intact.
+          ga("send", {
+            "hitType": "pageview",
+            "page": Drupal.googleanalytics.getPageUrl(this.href),
+            "transport": "beacon"
+          });
+        }
+      }
+      else {
+        if (Drupal.settings.googleanalytics.trackMailto && $(this).is("a[href^='mailto:'],area[href^='mailto:']")) {
+          // Mailto link clicked.
+          ga("send", {
+            "hitType": "event",
+            "eventCategory": "Mails",
+            "eventAction": "Click",
+            "eventLabel": this.href.substring(7),
+            "transport": "beacon"
+          });
+        }
+        else if (Drupal.settings.googleanalytics.trackOutbound && this.href.match(/^\w+:\/\//i)) {
+          if (Drupal.settings.googleanalytics.trackDomainMode !== 2 || (Drupal.settings.googleanalytics.trackDomainMode === 2 && !Drupal.googleanalytics.isCrossDomain(this.hostname, Drupal.settings.googleanalytics.trackCrossDomains))) {
+            // External link clicked / No top-level cross domain clicked.
+            ga("send", {
+              "hitType": "event",
+              "eventCategory": "Outbound links",
+              "eventAction": "Click",
+              "eventLabel": this.href,
+              "transport": "beacon"
+            });
+          }
+        }
+      }
+    });
+  });
+
+  // Track hash changes as unique pageviews, if this option has been enabled.
+  if (Drupal.settings.googleanalytics.trackUrlFragments) {
+    window.onhashchange = function() {
+      ga("send", {
+        "hitType": "pageview",
+        "page": location.pathname + location.search + location.hash
+      });
+    };
+  }
+
+  // Colorbox: This event triggers when the transition has completed and the
+  // newly loaded content has been revealed.
+  if (Drupal.settings.googleanalytics.trackColorbox) {
+    $(document).bind("cbox_complete", function () {
+      var href = $.colorbox.element().attr("href");
+      if (href) {
+        ga("send", {
+          "hitType": "pageview",
+          "page": Drupal.googleanalytics.getPageUrl(href)
+        });
+      }
+    });
+  }
+
+});
+
+/**
+ * Check whether the hostname is part of the cross domains or not.
+ *
+ * @param string hostname
+ *   The hostname of the clicked URL.
+ * @param array crossDomains
+ *   All cross domain hostnames as JS array.
+ *
+ * @return boolean
+ */
+Drupal.googleanalytics.isCrossDomain = function (hostname, crossDomains) {
+  /**
+   * jQuery < 1.6.3 bug: $.inArray crushes IE6 and Chrome if second argument is
+   * `null` or `undefined`, http://bugs.jquery.com/ticket/10076,
+   * https://github.com/jquery/jquery/commit/a839af034db2bd934e4d4fa6758a3fed8de74174
+   *
+   * @todo: Remove/Refactor in D8
+   */
+  if (!crossDomains) {
+    return false;
+  }
+  else {
+    return $.inArray(hostname, crossDomains) > -1 ? true : false;
+  }
+};
+
+/**
+ * Check whether this is a download URL or not.
+ *
+ * @param string url
+ *   The web url to check.
+ *
+ * @return boolean
+ */
+Drupal.googleanalytics.isDownload = function (url) {
+  var isDownload = new RegExp("\\.(" + Drupal.settings.googleanalytics.trackDownloadExtensions + ")([\?#].*)?$", "i");
+  return isDownload.test(url);
+};
+
+/**
+ * Check whether this is an absolute internal URL or not.
+ *
+ * @param string url
+ *   The web url to check.
+ *
+ * @return boolean
+ */
+Drupal.googleanalytics.isInternal = function (url) {
+  var isInternal = new RegExp("^(https?):\/\/" + window.location.host, "i");
+  return isInternal.test(url);
+};
+
+/**
+ * Check whether this is a special URL or not.
+ *
+ * URL types:
+ *  - gotwo.module /go/* links.
+ *
+ * @param string url
+ *   The web url to check.
+ *
+ * @return boolean
+ */
+Drupal.googleanalytics.isInternalSpecial = function (url) {
+  var isInternalSpecial = new RegExp("(\/go\/.*)$", "i");
+  return isInternalSpecial.test(url);
+};
+
+/**
+ * Extract the relative internal URL from an absolute internal URL.
+ *
+ * Examples:
+ * - http://mydomain.com/node/1 -> /node/1
+ * - http://example.com/foo/bar -> http://example.com/foo/bar
+ *
+ * @param string url
+ *   The web url to check.
+ *
+ * @return string
+ *   Internal website URL
+ */
+Drupal.googleanalytics.getPageUrl = function (url) {
+  var extractInternalUrl = new RegExp("^(https?):\/\/" + window.location.host, "i");
+  return url.replace(extractInternalUrl, '');
+};
+
+/**
+ * Extract the download file extension from the URL.
+ *
+ * @param string url
+ *   The web url to check.
+ *
+ * @return string
+ *   The file extension of the passed url. e.g. "zip", "txt"
+ */
+Drupal.googleanalytics.getDownloadExtension = function (url) {
+  var extractDownloadextension = new RegExp("\\.(" + Drupal.settings.googleanalytics.trackDownloadExtensions + ")([\?#].*)?$", "i");
+  var extension = extractDownloadextension.exec(url);
+  return (extension === null) ? '' : extension[1];
+};
+
+})(jQuery);
+;
+¿]Ì±      XãB$XãB$=œø®k¯Dú   T    :http://www.ubuntu-es.org/files/js/js_ySlTuE3JnLWpYUz3jGUuPnqKbmhC84JF3n0AzWUVkMQ.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Server: nginx/1.2.1
+Date: Tue, 04 Apr 2017 06:49:31 GMT
+Content-Type: application/x-javascript
+Content-Length: 13027
+Last-Modified: Fri, 10 Feb 2017 13:20:26 GMT
+Expires: Thu, 31 Dec 2037 23:55:55 GMT
+Cache-Control: max-age=315360000
+Accept-Ranges: bytes
+ original-response-headers Server: nginx/1.2.1
+Date: Tue, 04 Apr 2017 06:49:31 GMT
+Content-Type: application/x-javascript
+Content-Length: 13027
+Last-Modified: Fri, 10 Feb 2017 13:20:26 GMT
+Connection: keep-alive
+Expires: Thu, 31 Dec 2037 23:55:55 GMT
+Cache-Control: max-age=315360000
+Accept-Ranges: bytes
+ uncompressed-len 0 net-response-time-onstart 800 net-response-time-onstop 801   2ã

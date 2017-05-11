@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	{% load staticfiles %}
+
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</head>
+<body>
+<a href="{% url 'new_product' %}">New</a>
+	<table border="1">
+    {% for pr in product %}
+	<tr>
+	<td><a href="{% url 'product_detail' pr.pk %}">{{ pr.Nombre }}</td>
+	<td>{{ pr.Descripcion }}</td>
+	<td>{{ pr.Categoria }}</td>
+	<td>{{ pr.Precio }}</td>
+	</tr>
+	<tr>
+	    <td colspan="4"><img src="{{ pr.image.url }}" /></td>
+	</tr>
+
+    {% endfor %}
+</table>
+</body>
+</html>

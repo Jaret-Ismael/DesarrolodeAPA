@@ -1,0 +1,97 @@
+usar API 
+1.-ir a :
+last.fm/api
+
+2.-crear carpeta dentro de "src" nombreada "api"
+crear archivo
+
+config.js
+
+export default {
+appname: 
+apiKey:
+secret:
+registeredTo:
+}
+
+3.-Modificar el codigo PUG de archivo
+
+y colocar etiquetas vuejs
+
+ul
+      li(v-for="artist in artists") {{artist.name}}
+
+4.- En la sección de javascript colocar:
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+      artists:[
+      {name:'David Bowie'},
+      {name:'Mana'},
+
+      ]
+    }
+  }
+}
+</script>
+
+como ejemplo, para comprobar que esta cargando con vuejs objetos en la pagina web 
+
+5.-Utilizar API:
+*En la pagina last.fm/api ir a link "Geo"->Geo.getTopArtists
+probar el link
+JSON: /2.0/?method=geo.gettopartists&country=spain&api_key=YOUR_API_KEY&format=json
+
+modificar "YOUR_API_KEY" por su API key
+ y modificar country=spain por country=mexico
+(Ver el cambio)
+* este paso solo es para comprobar que se genera una consulta de API REST
+
+6.-Empezar a configurar el API REST:
+Crear un archivo llamado "index.js" dentro del directorio "api"
+con el siguiente código:
+
+import config from './config'
+
+const {apiKey}= config
+
+const URL =`http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=spain&api_key=${apiKey}&format=json`
+
+export default function getArtists() {
+	return fetch(URL)
+	.then(res => res.json())
+	.then(json => json.topartists.artist)
+}
+
+
+notar que se a creado una variable URL con la url de API y se importan datos de la configuración del archivo config.
+
+y el archivo json de exporta mediante una función.
+
+7.-En el archivo "App.vue" modificar el contenido de script
+
+<script>
+import getArtists from './api'
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      artists:[]
+    }
+  },
+  mounted: function (){
+    const self = this
+    getArtists()
+      .then(function (artists) {
+        self.artists = artists
+      })
+
+  }
+}
+</script>
+*notar que se importa el metodo getArtists de directorio "api"
+y se monta el contenido de está en el objeto "artists" creado anteriormente.
+

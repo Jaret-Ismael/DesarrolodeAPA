@@ -1,0 +1,23 @@
+{% extends 'adminlte/base.html'%}
+{% block title %}Basquet{% endblock%}
+{%block content %} 
+	<table border="1" align="center" bordercolor="black" collspacing="0">
+    {% for pr in product %}
+	<tr>
+	<td><a href="% url 'product_detail' pr.pk %">{{ pr.nombre }}</td>
+	<td>{{ pr.descripcion }}</td>
+	<td>{{ pr.categoria }}</td>
+	<td>{{ pr.precio}}</td>
+	
+
+	    <td colspan="4"><img src="{{ pr.image.url }}" /></td>
+	</tr>
+
+    {% endfor %}
+</table>
+
+<a href="{% url 'new_product' %}">Nuevo</a>
+{% load staticfiles %}
+
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}

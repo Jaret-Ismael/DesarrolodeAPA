@@ -1,0 +1,21 @@
+openConnection: connect: No existe el archivo o el directorio
+cannot connect to brltty at :0
+upstart: unity7 main proceso terminado, reiniciando
+upstart: unity-settings-daemon main proceso terminado, reiniciando
+upstart: upstart-dbus-session-bridge main proceso (1322) terminó con estatus 1
+upstart: bamfdaemon main proceso (1389) interumpido por la señal TERM
+upstart: hud main proceso (1411) interumpido por la señal HUP
+upstart: unity-panel-service main proceso (1427) interumpido por la señal HUP
+upstart: indicator-bluetooth main proceso (1444) interumpido por la señal TERM
+upstart: indicator-power main proceso (1445) interumpido por la señal TERM
+upstart: indicator-datetime main proceso (1451) interumpido por la señal TERM
+upstart: indicator-sound main proceso (1453) interumpido por la señal HUP
+upstart: indicator-printers main proceso (1454) interumpido por la señal TERM
+upstart: indicator-session main proceso (1455) interumpido por la señal TERM
+upstart: indicator-application main proceso (1459) interumpido por la señal TERM
+upstart: unity7 pre-start proceso (2494) interumpido por la señal TERM
+upstart: unity-settings-daemon main proceso (2497) interumpido por la señal TERM
+upstart: indicator-application pre-stop proceso (2500) interumpido por la señal TERM
+upstart: gnome-session (Unity) pre-stop proceso (2503) interumpido por la señal TERM
+upstart: gnome-session (Unity) main proceso (1422) interumpido por la señal HUP
+upstart: Disconnected from notified D-Bus bus

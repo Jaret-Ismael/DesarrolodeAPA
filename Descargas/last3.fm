@@ -1,0 +1,110 @@
+//seleccionar región de la lista de artistas
+
+1.- modificar en App.vue
+
+<template lang="pug">
+  <div id="app">
+    <img src="./assets/logo.png">
+    h1 Album Music
+    select 
+      option(v-for="country in countries" v-bind:value="country.value") {{ country.name}}
+    ul
+      artist(v-for="artist in artists" v-bind:artist="artist" v-bind:key="artist.mbid") 
+    
+  </div>
+</template>
+
+2.-modificar en la sección de script:
+
+<script>
+import Artist from './components/Artist.vue'
+import getArtists from './api'
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      artists:[],
+      countries:[
+      { name:'Mexico',value:'mexico'},
+      { name:'Argentina',value:'argentina'},
+      { name:'Colombia',value:'colombia'},
+      ]
+    }
+  },
+  components:{
+    Artist
+  },
+  mounted: function (){
+    const self = this
+    getArtists()
+      .then(function (artists) {
+        self.artists = artists
+      })
+
+  }
+}
+</script>
+
+3.-Agregar metodos para hacer la selección:
+agregar al select:
+select(v-model="selectedCountry")
+
+2.-Modificar el script
+
+<script>
+import Artist from './components/Artist.vue'
+import getArtists from './api'
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      artists:[],
+      countries:[
+      { name:'Mexico',value:'mexico'},
+      { name:'Argentina',value:'argentina'},
+      { name:'Colombia',value:'colombia'},
+      { name:'España',value:'spain'},
+      ],
+      selectedCountry: 'mexico'
+    }
+  },
+  components:{
+    Artist
+  },
+  methods:{
+    refreshArtists(){
+      const self = this
+    getArtists(this.selectedCountry)
+      .then(function (artists) {
+        self.artists = artists
+      })
+
+    }
+  },
+  mounted(){
+    this.refreshArtists()
+  },
+  watch: {
+    selectedCountry(){
+      this.refreshArtists()
+
+    }
+  }
+}
+</script>
+3.-Modificar en index.js
+
+import config from './config'
+
+const {apiKey}= config
+
+const URL =`http://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=:country&api_key=${apiKey}&format=json`
+
+export default function getArtists(country) {
+	const url = URL.replace(':country', country)
+	return fetch(url)
+	.then(res => res.json())
+	.then(json => json.topartists.artist)
+}
